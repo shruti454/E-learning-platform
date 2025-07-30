@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillStride - E-Learning Platform</title>
+    <link rel="stylesheet" href="E-learning.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SkillUpdating</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#progress" class="nav-link">Progress</a></li>
+                <li><a href="#profile" class="nav-link">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="page-section active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>Welcome to SkillUpdating</h1>
+                    <p>Master new skills with our comprehensive online courses</p>
+                    <button class="btn btn-primary" onclick="navigateTo('courses')">
+                        <i class="fas fa-play"></i>
+                        Start Learning
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-placeholder">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>12</h3>
+                        <p>Courses Enrolled</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>48h</h3>
+                        <p>Learning Time</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>8</h3>
+                        <p>Certificates</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>92%</h3>
+                        <p>Average Score</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="page-section">
+            <div class="section-header">
+                <h2>Available Courses</h2>
+                <p>Choose from our wide range of courses</p>
+            </div>
+            
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Courses will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress" class="page-section">
+            <div class="section-header">
+                <h2>Your Progress</h2>
+                <p>Track your learning journey</p>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-chart">
+                    <canvas id="progressChart" width="400" height="200"></canvas>
+                </div>
+                <div class="course-progress" id="courseProgress">
+                    <!-- Progress items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="page-section">
+            <div class="section-header">
+                <h2>Profile</h2>
+                <p>Manage your account settings</p>
+            </div>
+            
+            <div class="profile-container">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Shruti Sharma</h3>
+                        <p>shrutisharmass3467065@gmail.com</p>
+                        <span class="profile-badge">Premium Member</span>
+                    </div>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="detail-group">
+                        <label>Full Name</label>
+                        <input type="text" value="Shruti Sharma" class="form-input">
+                    </div>
+                    <div class="detail-group">
+                        <label>Email</label>
+                        <input type="email" value="shrutisharmass3467065@gmail.com" class="form-input">
+                    </div>
+                    <div class="detail-group">
+                        <label>Bio</label>
+                        <textarea class="form-input" rows="3">Passionate learner exploring new technologies and skills.</textarea>
+                    </div>
+                    <button class="btn btn-primary">Update Profile</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideoModal()">&times;</span>
+            <div class="video-container">
+                <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="E-learning.js"></script>
+</body>
+</html>
